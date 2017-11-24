@@ -1,0 +1,9 @@
+%li.chat-message{ 'data-message-id': message.id }
+  .chat-message__header.clearfix
+    %p.chat-message__name
+      = current_user.name
+    %p.chat-message__time
+      = format_posted_time(message.created_at)
+  %p.chat-message__body
+    = message.body
+  = image_tag message.image.url if message.image.present?
