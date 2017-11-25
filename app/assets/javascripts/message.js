@@ -96,7 +96,6 @@ function intervalmessage(group_id, current_url) {
     type: 'GET',
     url: current_url,
     data: {
-      last_message_id: last_message_id,
       groupid_json: group_id
     },
     dataType: 'json'
