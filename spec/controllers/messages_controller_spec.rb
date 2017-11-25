@@ -24,7 +24,7 @@ describe MessagesController, type: :controller do
 
   context "with valid attributes" do
     it "saves the new message in the database" do
-      expect{ create :message }.to change{ Message.count }.by(1)
+      expect{ create :message }.to change{ Message }.by(1)
     end
 
     it 'redirects to messages#create' do
