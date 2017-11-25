@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :group_users
   has_many :messages
 
-  scope :not_user, -> (user){ where.not(id: user) }
+  scope :not_user, -> (user){ where.not(name: user) }
   scope :incremental_search, -> (name){ where('name LIKE(?)',"%#{name}%") }
 
   validates :name, presence: true, uniqueness: true
