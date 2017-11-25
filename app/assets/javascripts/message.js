@@ -36,7 +36,6 @@ $(document).on('turbolinks:load', function() {
       var flash = buildflashmessage(flash_status);
       $('.flash-messages').prepend(flash);
     }
-    return false;
   });
 
   var autoReload = setInterval(function() {
