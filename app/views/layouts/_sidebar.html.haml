@@ -5,6 +5,6 @@
     .chat-user__actions
       = link_to new_group_path, class: 'chat-user__action' do
         %i.fa.fa-pencil-square-o
-      = link_to edit_user_registration_path, class: 'chat-user__action' do
-        %i.fa.fa-cog
+      = link_to "", edit_user_registration_path, class: 'chat-user__action'
+      %i.fa.fa-cog
   = render partial: 'sidebar/group', collection: current_user.groups, as: "group"

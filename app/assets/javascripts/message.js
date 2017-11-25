@@ -13,8 +13,6 @@ $(document).on('turbolinks:load', function() {
         type: 'POST',
         url: '../messages',
         data: formData,
-        processData: false,
-        contentType: false,
         dataType: 'json'
       })
       .done(function(message) {

@@ -30,7 +30,7 @@ describe GroupsController, type: :controller do
 
     it "assigns the requested contanct to @group" do
       get :edit, params: { id: group }
-      expect(assigns(:group)).to eq group
+      expect(response).to eq group
     end
   end
 end
