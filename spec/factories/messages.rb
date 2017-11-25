@@ -4,7 +4,7 @@
 FactoryGirl.define do
   factory :message do
     body          "text"
-    image         { fixture_file_upload("spec/fixtures/img/sample.png", 'image/png') }
+    image         fixture_file_upload("spec/fixtures/img/sample.png", 'image/png')
     user_id       1
     group_id      1
   end
