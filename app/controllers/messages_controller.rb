@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
     if @message.save
       respond_to do |format|
         format.html { redirect_to new_group_message_path(params[:group_id]), notice: 'メッセージの投稿が完了しました。' }
-        format.json
+        format.json { render json: @message }
       end
     else
       flash[:alert] = 'メッセージの送信に失敗しました。'
