@@ -6,7 +6,7 @@ class Group < ApplicationRecord
   validates :name, presence: true
 
   def show_last_message
-    if (last_message = messages.last).present?
+    if (last_message = messages.first).present?
       last_message.body? ? last_message.body : '画像が投稿されてされています。'
     else
       'まだメッセージはありません。'
