@@ -36,7 +36,6 @@ $(document).on('turbolinks:load', function() {
       var flash = buildflashmessage(flash_status);
       $('.flash-messages').prepend(flash);
     }
-    return false;
   });
 
   var autoReload = setInterval(function() {
@@ -91,7 +90,7 @@ function scrollBottom(){
 }
 
 function intervalmessage(group_id, current_url) {
-  var last_message_id = $('.chat-message').last().data('message-id') || 0;
+  var last_message_id = $('.chat-message').data('message-id') || 0;
   $.ajax({
     type: 'GET',
     url: current_url,
