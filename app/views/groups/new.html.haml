@@ -33,7 +33,7 @@
           .chat-group-user.clearfix
             .chat-group-user__name
               = current_user.name
-              = f.hidden_field :usr_ids, name: 'group[user_ids][]', value: current_user.id
+              = f.hidden_field :usr_ids, name: 'group[user_ids][]', value: ''
         #chat-group-users
 
     .chat-group-form__field.clearfix
